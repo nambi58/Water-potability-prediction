@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/water.css') }}"> 
+	   <title>Prediction</title>
+	</head>
+
+
+<body>
+    <h1>STAY HEALTHY !!!</h1>
+    <div class="login center">
+       
+        <br>
+        <form action="{{ url_for('water_potable')}}" method="POST">
+            <h4>Enter PH value </h4>
+            <input type="text" name="ph" placeholder="ph" required="required"/>
+   
+
+            <h4>Enter Hardness </h4>
+            <input type="text" name="Hardness" placeholder="Hardness" required="required"/>
+            
+
+	    <h4>Enter Solids </h4>
+            <input type="text" name="Solids" placeholder="Solids" required="required"/>
+            
+
+	    <h4>Enter Chloramines </h4>
+            <input type="text" name="Chloramines" placeholder="Chloramines" required="required"/>
+            
+
+	    <h4>Enter Sulfate  </h4>
+            <input type="text" name="Sulfate " placeholder="Sulfate " required="required"/>
+            
+
+	    <h4>Enter Conductivity  </h4>
+            <input type="text" name="Conductivity " placeholder="Conductivity " required="required"/>
+            
+
+	    <h4>Enter Organic_carbon </h4>
+            <input type="text" name="Organic_carbon" placeholder="Organic_carbon" required="required"/>
+            
+
+	    <h4>Enter Trihalomethanes  </h4>
+            <input type="text" name="Trihalomethanes" placeholder="Trihalomethanes" required="required"/>
+			
+		<h4>Enter Turbidity  </h4>
+            <input type="text" name="Turbidity" placeholder="Turbidity" required="required"/>
+            
+
+            <button type="submit" class="btn btn-primary btn-block btn-large"> SUBMIT </button>
+        </form>
+        <br>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>

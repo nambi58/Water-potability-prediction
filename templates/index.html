@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body bgcolor="silver">  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styleindex.css') }}">  
+  <title>Prediction</title>  
+</head>
+<body>
+    
+    <div class="login center">
+        <h2>Drink clean water, Live health...! Water Is A Natural Medicine!</h2>
+        <br>
+
+        
+	<form action ="{{url_for('water')}}" method ="POST">
+	     <button id ="potable" type ="submit" class="btn btn-primary btn-block btn-large"> Water potability prediction  </button>
+	</form>
+
+        
+    </div>
+</body>
+</html>
